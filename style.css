@@ -1,0 +1,243 @@
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hamburger {
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+
+/* Header Section */
+
+header {
+  height: 800px;
+  background-image: url(./img/banner-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  nav {
+    margin: 0 2rem;
+    .nav-wrapper {
+      position: relative;
+      display: flex;
+      height: 200px;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+      }
+
+      .menu {
+        display: flex;
+        list-style: none;
+        gap: 50px;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .hamburger {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+    padding: 3rem 0;
+
+    nav {
+      .nav-wrapper {
+        flex-direction: column;
+        align-items: start;
+        margin: 3rem 0;
+        height: auto;
+
+        .menu.show {
+          display: flex !important;
+        }
+
+        .menu {
+          display: none;
+          flex-direction: column;
+          gap: 0;
+
+          li {
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.discount-title-wrapper {
+  color: rgb(248, 248, 248);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .dis-box {
+    width: 55rem;
+    margin: 0.625rem;
+
+    h1 {
+      font-size: clamp(2rem, 10vw, 6.875rem);
+      text-transform: uppercase;
+    }
+    p {
+      font-size: clamp(1rem, 10vw, 1.875rem);
+    }
+    .btn-dis {
+      display: inline-flex;
+      background-color: yellow;
+      color: black;
+      max-width: 320px;
+      width: 100%;
+      height: 65px;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 50px;
+    }
+  }
+}
+
+.popular-menu {
+  background: url(img/popular-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  color: black;
+  overflow: hidden;
+
+  .popular-menu-title {
+    margin: 3rem 0;
+    text-align: center;
+
+    h2 {
+      font-size: clamp(2rem, 10vw, 3.875rem);
+      text-transform: uppercase;
+    }
+    p {
+      font-size: clamp(2rem, 10vw, 1.625rem);
+    }
+  }
+  .popular-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+
+    .popular-pic {
+      text-align: center;
+
+      img {
+        width: 100%;
+      }
+      h3 {
+        font-size: clamp(1rem, 10vw, 2rem);
+        margin: 1rem 0;
+      }
+      p {
+        font-size: clamp(1rem, 10vw, 1.25rem);
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    height: auto;
+    padding: 3rem 0;
+  }
+}
+
+.chicken {
+  background: url(img/chicken-wing-bg-black.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+
+.chicken-wrapper {
+  display: flex;
+  align-items: center;
+  height: 800px;
+}
+
+.chicken-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.chicken-img img {
+  width: 100%;
+}
+
+.chicken-info {
+  max-width: 580px;
+  width: 100%;
+  color: white;
+  padding: 1rem;
+}
+
+.chicken-info h2 {
+  font-size: clamp(2rem, 10vw, 3.75rem);
+  text-transform: uppercase;
+}
+
+.chicken-info p {
+  font-size: clamp(1.2rem, 5vw, 1.5rem);
+}
+
+.btn-chic {
+  display: inline-flex;
+  background-color: yellow;
+  color: black;
+  max-width: 320px;
+  width: 100%;
+  height: 65px;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  
+  .chicken {
+    height: auto; 
+  }
+
+  .chicken-wrapper {
+    height: auto;
+  }
+
+  .chicken-box {
+    display: flex;
+    padding: 2rem 0;
+    flex-direction: column; 
+    text-align: center;   
+  }
+
+}
