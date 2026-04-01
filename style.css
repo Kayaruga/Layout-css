@@ -224,9 +224,8 @@ header {
 }
 
 @media screen and (max-width: 768px) {
-  
   .chicken {
-    height: auto; 
+    height: auto;
   }
 
   .chicken-wrapper {
@@ -236,8 +235,313 @@ header {
   .chicken-box {
     display: flex;
     padding: 2rem 0;
-    flex-direction: column; 
-    text-align: center;   
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.stat {
+  background: url(img/stats-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  color: black;
+  overflow: hidden;
+
+  .stat-title {
+    text-align: center;
+    margin-top: 4rem;
+
+    h2 {
+      font-size: clamp(2rem, 10vw, 3.75rem);
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: clamp(2rem, 10vw, 1.5rem);
+      margin-top: 2rem;
+    }
   }
 
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5rem;
+    text-align: center;
+    margin-top: 4rem;
+
+    .item {
+      border: 10px solid black;
+      padding: 8rem 0;
+      margin-top: 10px;
+
+      h3 {
+        font-size: clamp(2rem, 10vw, 4rem);
+        text-transform: uppercase;
+      }
+
+      p {
+        font-size: clamp(2rem, 10vw, 2rem);
+        font-weight: bold;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+    padding: 3rem 0;
+  }
 }
+
+/* Satay css */
+
+.satay {
+  background: url(img/chicken-satay-bg-black.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  color: white;
+
+  .satay-wrapper {
+    display: flex;
+    align-items: center;
+    height: 800px;
+
+    .satay-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      .satay-info {
+        max-width: 580px;
+        width: 100%;
+        padding: 1rem;
+
+        h3 {
+          font-size: clamp(2rem, 10vw, 4rem);
+          text-transform: uppercase;
+        }
+
+        p {
+          font-size: clamp(2rem, 10vw, 2rem);
+          font-weight: bold;
+        }
+
+        .btn-satay {
+          display: inline-flex;
+          background-color: yellow;
+          color: black;
+          max-width: 320px;
+          width: 100%;
+          height: 65px;
+          justify-content: center;
+          align-items: center;
+          text-transform: uppercase;
+          font-weight: bold;
+          text-decoration: none;
+          border-radius: 5px;
+          margin-top: 50px;
+        }
+      }
+      .satay-img {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    height: auto;
+    .satay-wrapper {
+      height: auto;
+      .satay-box {
+        flex-direction: column;
+        padding: 3rem 0;
+      }
+    }
+  }
+}
+
+.chef {
+  height: 800px;
+  background: url(img/chef-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .chef-wrapper {
+    display: flex;
+    height: 800px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .chef-info {
+      .img {
+        max-width: 268px;
+        width: 100%;
+      }
+
+      h3 {
+        font-size: clamp(1rem, 10vw, 2.8rem);
+      }
+
+      p {
+        font-size: clamp(1rem, 10vw, 2.3rem);
+        margin: 3rem 0;
+      }
+    }
+  }
+}
+
+.update {
+  height: 800px;
+  background: url(img/update-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .update-wrapper {
+    display: flex;
+    justify-content: center;
+    color: black;
+    height: 800px;
+    align-items: center;
+
+    .update-box {
+      text-align: center;
+
+      h3 {
+        font-size: clamp(1rem, 10vw, 3.75rem);
+        text-transform: uppercase;
+      }
+
+      p {
+        font-size: clamp(1rem, 10vw, 1.875rem);
+        margin: 1rem 0;
+      }
+
+      form {
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+
+        input {
+          max-width: 550px;
+          width: 100%;
+          padding: 1rem;
+          border: none;
+          outline: none;
+        }
+
+        button {
+          max-width: 220px;
+          width: 100%;
+          padding: 1rem;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          background-color: black;
+          color: white;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  height: 400px;
+  background-color: rgb(61, 61, 61);
+  overflow: hidden;
+
+  .foooter-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    height: 400px;
+    color: white;
+    margin: 1rem;
+
+    .title-box {
+      align-items: center;
+
+      h4 {
+        font-size: clamp(1.5rem, 10vw, 2.5rem);
+        margin: 1rem ;
+      }
+
+      p {
+        font-size: clamp(0.75rem, 10vw, 1rem);
+        font-weight: bold;
+        max-width: 330px;
+        width: 100%;
+        margin: 1rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        margin-right: 0.5rem;
+
+        i {
+          font-size: 2rem;
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    .about-box {
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      h4 {
+        font-size: clamp(1.5rem, 10vw, 2.5rem);
+        margin: 1rem ;
+        color: white;
+      }
+
+      h5 {
+        font-size: clamp(0.5rem, 10vw, 1rem);
+        margin: 1rem;
+      }
+    }
+
+    .services-box {
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      h4 {
+        font-size: clamp(1.5rem, 10vw, 2.5rem);
+        margin: 1rem ;
+        color: white;
+      }
+
+      h5 {
+        font-size: clamp(0.5rem, 10vw, 1rem);
+        margin: 1rem;
+      }
+    }
+
+    .other-box {
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      h4 {
+        font-size: clamp(1.5rem, 10vw, 2.5rem);
+        margin: 1rem ;
+        color: white;
+      }
+
+      h5 {
+        font-size: clamp(0.5rem, 10vw, 1rem);
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+
